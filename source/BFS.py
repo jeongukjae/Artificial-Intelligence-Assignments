@@ -10,19 +10,17 @@ import random
 # 가능한 움직임들
 DIRECTIONS = [UP, DOWN, LEFT, RIGHT]
 
-# 해당 node의 state와 depth를 출력
-def log(node):
-    print('current state : {0}, depth : {1}'.format(node.get_data().get_state(), node.get_depth()))
-
-# 부모 node와 중복인지 아닌지 체크
+# 부모 노드 중복 체크. 중복이면 그냥 바로 짜름
 def check_duplication_of_parent(node):
     parent = node.get_parent()
 
     while True:
+        # state (여기서는 길이가 9인 리스트)가 같으면 중복임
         if node.get_data().get_state() == parent.get_data().get_state():
             return True
 
-        if parent.get_depth() == 0:
+        # 최상위 노드에 도달하면 짜름
+        if parent.get_depth() == 1:
             return False
 
         parent = parent.get_parent()
@@ -75,7 +73,7 @@ def search(initial_node):
         current_puzzle = node.get_data()
 
         # log 찍기
-        log(node)
+        print(node)
 
         # 게임 끝났으면
         if current_puzzle.is_end():
@@ -92,10 +90,10 @@ def run(times):
     puzzle.shuffle(times) # puzzle 섞기
 
     # 결과
-    result = search(Node(0, puzzle))
+    result = search(Node(1, puzzle))
 
     # 출력
-    print("Final Depth : {0}".format(result.get_depth()))
+    print("game end : {0}".format(result))
 
 if __name__ == "__main__":
     # 15번 섞은거 찾는걸 100번 돌림

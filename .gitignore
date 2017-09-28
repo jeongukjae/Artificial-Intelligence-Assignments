@@ -1,3 +1,4 @@
 /env
 log.txt
 __pycache__
+*.pyc

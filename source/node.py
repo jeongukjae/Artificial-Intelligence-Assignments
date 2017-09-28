@@ -7,6 +7,9 @@ class Node:
         self.depth = depth
         self.data = data
 
+    def __repr__(self):
+        return 'state : {0}, depth : {1}'.format(self.data.get_state(), self.depth)
+
     def get_depth(self):
         return self.depth
 
