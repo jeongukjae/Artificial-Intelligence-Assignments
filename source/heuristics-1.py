@@ -93,6 +93,7 @@ def search(initial_node):
         # 아니면 확장
         fringe.extend(make_nodes(node))
 
+        # 휴리스틱 값으로 정렬
         fringe = sorted(fringe, key=lambda x: x.heuristics )
 
     return False
@@ -112,7 +113,7 @@ def run(times):
     print("game end : {0}".format(result))
 
 if __name__ == "__main__":
-    # 15번 섞은거 찾는걸 100번 돌림
+    # 15번 섞은거 찾는걸 10번 돌림
     # 평균내자
     for _ in range(10):
         run(15)

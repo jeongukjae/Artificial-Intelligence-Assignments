@@ -123,7 +123,7 @@ def run(times):
     print("game end : {0}".format(result))
 
 if __name__ == "__main__":
-    # 15번 섞은거 찾는걸 100번 돌림
+    # 15번 섞은거 찾는걸 10번 돌림
     # 평균내자
     for _ in range(10):
         run(15)
