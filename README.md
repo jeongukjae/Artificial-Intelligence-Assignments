@@ -22,3 +22,11 @@ steps 만큼 섞은 후 (움직임은 랜덤하게 지정함) 특정 알고리�
 Heuristics 1과 2는 A Star 방식의 탐색 알고리즘이다.
 
 Heuristics 1은 잘못 놓은 타일의 갯수를 h 함수로 두었다. 반면 Heuristics 2는 전체 Manhattan Distance를 h 함수로 두었다.
+
+## Einstein's Puzzle
+
+참고 : [https://web.stanford.edu/~laurik/fsmbook/examples/Einstein%27sPuzzle.html](https://web.stanford.edu/~laurik/fsmbook/examples/Einstein%27sPuzzle.html)
+
+너무 시간이 오래 걸려 실행은 해보지 않았습니다.
+
+참고 링크에 적힌대로 구현을 했습니다 .
