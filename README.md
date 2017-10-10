@@ -3,7 +3,7 @@
 
 ## 8 Puzzle
 
-### Average Elasped Time Table
+### Average Elapsed Time Table
 
 |steps	| BFS 		| IDS 		|Heuristics 1	|Heuristics 2	|
 |---	|---		|---		|---			|---	|
