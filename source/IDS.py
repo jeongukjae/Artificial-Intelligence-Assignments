@@ -143,10 +143,15 @@ if __name__ == "__main__":
     start_time = time.time()
 
     for _ in range(1000):
-        run(15)
+        run(10)
 
     elapsed_time = time.time() - start_time
     print('average elapsed time : {0}'.format(elapsed_time / 1000))
 
+# 10번 섞은 퍼즐을 푸는 데 걸린 평균 (1000번 시행)
+# average elapsed time : 0.022545029878616334
+# average elapsed time : 0.0198214430809021
+
+# 15번 섞은 퍼즐을 푸는 데 걸린 평균 (1000번 시행)
 # average elapsed time : 0.07743071508407592
 # average elapsed time : 0.08387356281280517 
