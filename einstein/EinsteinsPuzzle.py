@@ -2,7 +2,7 @@
 import itertools
 
 from elements import Node, House, Constraint
-from constraints import CONSTRAINTS, SINGLE_CONSTRAINTS
+from constraints import CONSTRAINTS
 
 COLORS          = ['blue', 'green', 'red', 'white', 'yellow']
 NATIONALITIES   = ['Dane', 'Englishman', 'German', 'Swede', 'Norwegian']

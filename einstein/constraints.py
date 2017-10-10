@@ -2,6 +2,38 @@
 
 from elements import Constraint
 
+def SC1(house):
+    return house.color == 'red' and house.nationality == 'Englishman'
+
+
+def SC2(house):
+    return house.pet == 'dogs' and house.nationality == 'Swede'
+
+
+def SC3(house):
+    return house.drink == 'tea' and house.nationality == 'Dane'
+
+
+def SC5(house):
+    return house.color == 'grean' and house.drink == 'coffee'
+
+
+def SC6(house):
+    return house.cigarette == 'PallMall' and house.pet == 'birds'
+
+
+def SC7(house):
+    return house.cigarette == 'Dunhill' and house.color == 'yellow'
+
+
+def SC12(house):
+    return house.cigarette == 'BlueMaster' and house.drink == 'bier'
+
+
+def SC13(house):
+    return house.nationality == 'German' and house.cigarette == 'Prince'
+
+
 def C1(node):
     for house in node.houses:
         if SC1(house):
