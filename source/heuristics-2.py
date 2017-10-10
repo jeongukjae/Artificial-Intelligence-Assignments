@@ -7,6 +7,7 @@ from eightpuzzle import EightPuzzle, UP, DOWN, LEFT, RIGHT
 
 import copy
 import random
+import time
 
 # 가능한 움직임들
 DIRECTIONS = [UP, DOWN, LEFT, RIGHT]
@@ -104,7 +105,7 @@ def search(initial_node):
         # 아니면 확장
         fringe.extend(make_nodes(node))
 
-        fringe = sorted(fringe, key=lambda x: x.heuristics )
+        fringe.sort(key=lambda x: x.heuristics + x.get_depth())
 
     return False
 
@@ -123,7 +124,13 @@ def run(times):
     print("game end : {0}".format(result))
 
 if __name__ == "__main__":
-    # 15번 섞은거 찾는걸 10번 돌림
-    # 평균내자
-    for _ in range(10):
+    start_time = time.time()
+
+    for _ in range(1000):
         run(15)
+
+    elapsed_time = time.time() - start_time
+    print('average elapsed time : {0}'.format(elapsed_time / 1000))
+
+# average elapsed time : 0.003479426145553589
+# average elapsed time : 0.003254929780960083

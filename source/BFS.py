@@ -6,6 +6,7 @@ from eightpuzzle import EightPuzzle, UP, DOWN, LEFT, RIGHT
 
 import copy
 import random
+import time
 
 # 가능한 움직임들
 DIRECTIONS = [UP, DOWN, LEFT, RIGHT]
@@ -96,7 +97,13 @@ def run(times):
     print("game end : {0}".format(result))
 
 if __name__ == "__main__":
-    # 15번 섞은거 찾는걸 100번 돌림
-    # 평균내자
-    for _ in range(100):
+    start_time = time.time()
+
+    for _ in range(1000):
         run(15)
+
+    elapsed_time = time.time() - start_time
+    print('average elapsed time : {0}'.format(elapsed_time / 1000))
+
+# average elasped time : 0.05540810298919678 
+# average elapsed time : 0.0539114351272583
