@@ -62,7 +62,7 @@ def get_possible_colors(state, region):
             another_region = tuple_of_regions[tuple_of_regions.index(region) ^ 1]
 
             if state[another_region] in domains:
-                domains.pop(state[another_region])
+                del domains[domains.index(state[another_region])]
 
     return domains
 
