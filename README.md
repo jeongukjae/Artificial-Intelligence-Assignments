@@ -36,3 +36,19 @@ Einstein Puzzle : [https://web.stanford.edu/~laurik/fsmbook/examples/Einstein%27
 너무 시간이 오래 걸려 실행은 해보지 않았습니다.
 
 참고 링크에 적힌대로 구현을 했습니다.
+
+
+## Map Coloring Problem
+
+CSP(Constraint Satisfaction Problems) 문제 중 하나인 Map Coloring Problem을 풀어보았습니다.
+
+![](./images/map-coloring.png)
+
+위와 같은 사진처럼 세가지 색을 이용하여 지도의 색을 정하는 문제입니다.
+
+아래와 같은 방법들로 풀어보았습니다.
+
+* back tracking search (이 문제의 경우에는 다음에 값을 할당할 Variable을 규칙 없이 정했습니다.)
+* minimum remaining values (MRV)
+* minimum remaining values + degree heuristic (degree heuristics는 MRV의 Tie-breaker 라고 합니다.)
+* least constraining value
